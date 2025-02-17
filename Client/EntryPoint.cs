@@ -30,9 +30,6 @@ namespace Client
                         List<Room> rooms = JsonConvert.DeserializeObject<List<Room>>(recievedRooms);
                         ViewRooms viewRooms = new ViewRooms(tcpClient, rooms);
                         viewRooms.ShowDialog();
-
-
-
                     }
                     catch (Exception ex)
                     {

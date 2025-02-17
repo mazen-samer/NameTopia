@@ -17,3 +17,4 @@ E:\ITI\C#\NameTopia\NameTopia\bin\Debug\net8.0\SharedClasses.pdb
 E:\ITI\C#\NameTopia\NameTopia\obj\Debug\net8.0\Server.csproj.AssemblyReference.cache
 E:\ITI\C#\NameTopia\NameTopia\obj\Debug\net8.0\Server.csproj.Up2Date
 E:\ITI\C#\NameTopia\NameTopia\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\ITI\C#\NameTopia\NameTopia\obj\Debug\net8.0\Server.sourcelink.json

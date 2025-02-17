@@ -2,6 +2,7 @@
 {
     public class Room
     {
+        public string RoomID { get; set; }
         public Player PlayerOne { get; set; }
         public Player PlayerTwo { get; set; }
         public bool IsAvailable { get; set; }
