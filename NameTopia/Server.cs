@@ -1,6 +1,5 @@
 ﻿using System.Net;
 using System.Net.Sockets;
-using Newtonsoft.Json;
 using Server;
 using SharedClasses;
 namespace NameTopia
@@ -53,15 +52,13 @@ namespace NameTopia
                 }
                 Console.WriteLine($"Welcome to the game {playerName}!");
 
-                string message;
-                while ((message = reader.ReadLine()) != null)
+                string command;
+                while ((command = reader.ReadLine()) != null)
                 {
-                    switch (message)
+                    switch (command)
                     {
                         case "GET_ROOMS":
-                            string jsonString = JsonConvert.SerializeObject(rooms);
-                            writer.WriteLine(jsonString);
-                            Console.WriteLine($"Sent room list to {playerName}");
+                            ClientEventHandler.SendAllRooms(player, rooms);
                             break;
                         case "CLOSE":
                             ClientEventHandler.HandleClientClosure(player, players);

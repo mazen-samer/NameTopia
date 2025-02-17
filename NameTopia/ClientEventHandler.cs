@@ -3,7 +3,7 @@ using SharedClasses;
 
 namespace Server
 {
-    internal class ClientEventHandler
+    abstract internal class ClientEventHandler
     {
         static readonly object lockObj = new object();
         public static void SendAllRooms(Player player, List<Room> rooms)
