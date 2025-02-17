@@ -4,9 +4,9 @@ namespace SharedClasses
 {
     public class Player
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public TcpClient Client { get; set; }
+        public int ID { get; private set; }
+        public string Name { get; private set; }
+        public TcpClient Client { get; private set; }
 
         public Player(int id, string name, TcpClient client)
         {

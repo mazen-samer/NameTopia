@@ -9,19 +9,23 @@ namespace NameTopia
         static int PlayersCount = 0;
         static List<string> Categories = new List<string>();
         static List<Player> players = new List<Player>();
-        //static List<Room> rooms = new List<Room>();
-        static Player mazen = new Player(1, "Mazen", null);
-        static Player ramadan = new Player(2, "Ramadan", null);
-        static Player gohamy = new Player(3, "Gohamy", null);
-        static Player player4 = new Player(4, "Player4", null);
-        static Player player5 = new Player(5, "Player5", null);
+        static List<Room> rooms = new List<Room>();
 
-        static List<Room> rooms = new List<Room>
-        {
-            new Room { PlayerOne = mazen, PlayerTwo = ramadan, IsAvailable = false },
-            new Room { PlayerOne = gohamy, PlayerTwo = player4, IsAvailable = true },
-            new Room { PlayerOne = player5, PlayerTwo = null, IsAvailable = true }
-        };
+        /// <summary>
+        /// This was for testing purposes ==> the constructor was edited --  check SharedClasses for more
+        /// </summary> 
+        //static Player mazen = new Player(1, "Mazen", null);
+        //static Player ramadan = new Player(2, "Ramadan", null);
+        //static Player gohamy = new Player(3, "Gohamy", null);
+        //static Player player4 = new Player(4, "Player4", null);
+        //static Player player5 = new Player(5, "Player5", null);
+
+        //static List<Room> rooms = new List<Room>
+        //{
+        //    new Room { PlayerOne = mazen, PlayerTwo = ramadan, IsAvailable = false },
+        //    new Room { PlayerOne = gohamy, PlayerTwo = player4, IsAvailable = true },
+        //    new Room { PlayerOne = player5, PlayerTwo = null, IsAvailable = true }
+        //};
         static readonly object lockObj = new object();
 
 
