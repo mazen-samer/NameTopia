@@ -1,0 +1,12 @@
+E:\ITI\C#\NameTopia\SharedClasses\bin\Debug\net8.0\SharedClasses.deps.json
+E:\ITI\C#\NameTopia\SharedClasses\bin\Debug\net8.0\SharedClasses.dll
+E:\ITI\C#\NameTopia\SharedClasses\bin\Debug\net8.0\SharedClasses.pdb
+E:\ITI\C#\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.GeneratedMSBuildEditorConfig.editorconfig
+E:\ITI\C#\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.AssemblyInfoInputs.cache
+E:\ITI\C#\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.AssemblyInfo.cs
+E:\ITI\C#\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.csproj.CoreCompileInputs.cache
+E:\ITI\C#\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.dll
+E:\ITI\C#\NameTopia\SharedClasses\obj\Debug\net8.0\refint\SharedClasses.dll
+E:\ITI\C#\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.pdb
+E:\ITI\C#\NameTopia\SharedClasses\obj\Debug\net8.0\ref\SharedClasses.dll
+E:\ITI\C#\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.csproj.AssemblyReference.cache
