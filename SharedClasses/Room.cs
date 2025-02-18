@@ -1,20 +1,27 @@
 ﻿namespace SharedClasses
 {
+    [Serializable]
     public class Room
     {
-        public string RoomID { get; private set; }
-        public Player PlayerOne { get; private set; }
-        public Player PlayerTwo { get; private set; }
-        public bool IsAvailable { get; private set; }
 
-        public Room(string id, Player player)
+        public string RoomID { get; private set; }
+        public string Category { get; private set; }
+        public List<Player> Players { get; private set; }
+        public bool IsAvailable => Players.Count < 2;
+
+        public Room(string roomID, Player host, string category)
         {
-            RoomID = id;
-            PlayerOne = player;
+            RoomID = roomID;
+            Category = category;
+            Players = new List<Player> { host };
         }
-        public override string ToString()
+
+        public void JoinRoom(Player player)
         {
-            return $"Room: PlayerOne={PlayerOne?.Name}, PlayerTwo={PlayerTwo?.Name}, IsAvailable={IsAvailable}";
+            if (IsAvailable)
+            {
+                Players.Add(player);
+            }
         }
     }
 }

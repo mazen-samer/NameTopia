@@ -2,6 +2,7 @@
 
 namespace SharedClasses
 {
+
     public class Player
     {
         public int ID { get; private set; }

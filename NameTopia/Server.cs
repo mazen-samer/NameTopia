@@ -1,7 +1,8 @@
-﻿using System.Net;
-using System.Net.Sockets;
+﻿using Newtonsoft.Json;
 using Server;
 using SharedClasses;
+using System.Net;
+using System.Net.Sockets;
 namespace NameTopia
 {
     internal class Server
@@ -17,7 +18,7 @@ namespace NameTopia
         //static Player mazen = new Player(1, "Mazen", null);
         //static Player ramadan = new Player(2, "Ramadan", null);
         //static Player gohamy = new Player(3, "Gohamy", null);
-        //static Player player4 = new Player(4, "Player4", null);
+        //static Player player4 = new Player(4, "player4", null);
         //static Player player5 = new Player(5, "Player5", null);
 
         //static List<Room> rooms = new List<Room>
@@ -63,7 +64,54 @@ namespace NameTopia
                     {
                         case "GET_ROOMS":
                             ClientEventHandler.SendAllRooms(player, rooms);
+                            string jsonString = JsonConvert.SerializeObject(rooms);
+                            writer.WriteLine(jsonString);
                             break;
+
+                        case "CREATE_ROOM":
+                            string roomJson = reader.ReadLine();
+                            Room newRoom = JsonConvert.DeserializeObject<Room>(roomJson);
+
+                            lock (lockObj)
+                            {
+                                rooms.Add(newRoom);
+                            }
+
+
+                            foreach (var p in players)
+                            {
+                                if (p.Client.Connected)
+                                {
+                                    ClientEventHandler.SendAllRooms(p, rooms);
+                                }
+                            }
+
+                            writer.WriteLine("Room created successfully");
+                            break;
+
+                        case "JOIN_ROOM":
+                            string roomId = reader.ReadLine();
+                            Room roomToJoin = null;
+                            foreach (Room r in rooms)
+                            {
+                                if (r.RoomID == roomId)
+                                {
+                                    roomToJoin = r;
+                                    break;
+                                }
+                            }
+                            if (roomToJoin != null && roomToJoin.IsAvailable)
+                            {
+                                roomToJoin.JoinRoom(player);
+                                writer.WriteLine("Joined room successfully");
+                            }
+                            else
+                            {
+                                writer.WriteLine("Room not found or is full");
+                            }
+                            break;
+
+                        //==
                         case "CLOSE":
                             ClientEventHandler.HandleClientClosure(player, players);
                             connectionClosed = true;
