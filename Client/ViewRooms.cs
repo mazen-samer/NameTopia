@@ -1,37 +1,40 @@
-﻿using System.Net.Sockets;
-using SharedClasses;
+﻿using SharedClasses;
 
 namespace Client
 {
     public partial class ViewRooms : Form
     {
-        TcpClient tcpClient;
+        Player currentPlayer;
         List<Room> rooms;
 
-        public ViewRooms(TcpClient tcpClient, List<Room> rooms)
+        public ViewRooms(Player player)
         {
-            this.tcpClient = tcpClient;
-            this.rooms = rooms;
             InitializeComponent();
-            PopulateRoomsList();
+            currentPlayer = player;
+            label2.Text = $"Welcome to the game {currentPlayer.Name}\n You are assigned to ID: {currentPlayer.ID}";
+            getAllRooms();
         }
 
-        private void PopulateRoomsList()
+        void getAllRooms()
         {
-            foreach (var room in rooms)
-            {
-                listBoxRooms.Items.Add(room.ToString());
-            }
+
         }
+
+
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            using (StreamWriter sw = new StreamWriter(tcpClient.GetStream()))
+            using (StreamWriter sw = new StreamWriter(currentPlayer.Client.GetStream()))
             {
                 sw.WriteLine("CLOSE");
             }
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void createRoomButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

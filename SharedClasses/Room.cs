@@ -2,15 +2,17 @@
 {
     public class Room
     {
-        public string RoomID { get; private set; }
+        public int RoomID { get; private set; }
         public Player PlayerOne { get; private set; }
         public Player PlayerTwo { get; private set; }
         public bool IsAvailable { get; private set; }
+        List<Player> Spectators { get; }
 
-        public Room(string id, Player player)
+        public Room(int id, Player player)
         {
             RoomID = id;
             PlayerOne = player;
+            IsAvailable = true;
         }
         public override string ToString()
         {

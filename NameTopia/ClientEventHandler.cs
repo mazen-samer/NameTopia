@@ -6,12 +6,11 @@ namespace Server
     abstract internal class ClientEventHandler
     {
         static readonly object lockObj = new object();
-        public static void SendAllRooms(Player player, List<Room> rooms)
+        public static void GetRooms(Player player, List<Room> rooms)
         {
             StreamWriter writer = new StreamWriter(player.Client.GetStream()) { AutoFlush = true };
             string jsonString = JsonConvert.SerializeObject(rooms);
             writer.WriteLine(jsonString);
-
         }
 
         public static void HandleClientClosure(Player player, List<Player> players)
@@ -23,6 +22,15 @@ namespace Server
             }
             player.Client.Close();
             Console.WriteLine($"Connection closed with {player.Name}");
+        }
+        public static void RequestPlayerData(StreamWriter writer, Player player)
+        {
+            string playerJson = JsonConvert.SerializeObject(player);
+            writer.WriteLine(playerJson);
+        }
+        public static void CreateRoom(List<Room> rooms)
+        {
+
         }
     }
 }
