@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NameTopia\Server.csproj" />
     <ProjectReference Include="..\SharedClasses\SharedClasses.csproj" />
   </ItemGroup>
 
