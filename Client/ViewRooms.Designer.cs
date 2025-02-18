@@ -31,6 +31,8 @@
             label1 = new Label();
             closeButton = new Button();
             listBoxRooms = new ListBox();
+            label2 = new Label();
+            createRoomButton = new Button();
             SuspendLayout();
             // 
             // label1
@@ -61,11 +63,32 @@
             listBoxRooms.Size = new Size(695, 104);
             listBoxRooms.TabIndex = 2;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(547, 23);
+            label2.Name = "label2";
+            label2.Size = new Size(50, 20);
+            label2.TabIndex = 3;
+            label2.Text = "label2";
+            // 
+            // createRoomButton
+            // 
+            createRoomButton.Location = new Point(547, 409);
+            createRoomButton.Name = "createRoomButton";
+            createRoomButton.Size = new Size(114, 29);
+            createRoomButton.TabIndex = 4;
+            createRoomButton.Text = "Create Room";
+            createRoomButton.UseVisualStyleBackColor = true;
+            createRoomButton.Click += createRoomButton_Click;
+            // 
             // ViewRooms
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(createRoomButton);
+            Controls.Add(label2);
             Controls.Add(listBoxRooms);
             Controls.Add(closeButton);
             Controls.Add(label1);
@@ -80,5 +103,7 @@
         private Label label1;
         private Button closeButton;
         private ListBox listBoxRooms;
+        private Label label2;
+        private Button createRoomButton;
     }
 }

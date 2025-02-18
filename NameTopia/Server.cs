@@ -7,6 +7,8 @@ namespace NameTopia
     internal class Server
     {
         static int PlayersCount = 0;
+        static int RoomsCount = 0;
+
         static List<string> Categories = new List<string>();
         static List<Player> players = new List<Player>();
         static List<Room> rooms = new List<Room>();
@@ -55,14 +57,19 @@ namespace NameTopia
                     players.Add(player);
                 }
                 Console.WriteLine($"Welcome to the game {playerName}!");
-
                 string command;
                 while ((command = reader.ReadLine()) != null)
                 {
                     switch (command)
                     {
+                        case "REQUEST_PLAYER_DATA":
+                            ClientEventHandler.RequestPlayerData(writer, player);
+                            break;
                         case "GET_ROOMS":
-                            ClientEventHandler.SendAllRooms(player, rooms);
+                            ClientEventHandler.GetRooms(player, rooms);
+                            break;
+                        case "CREATE_ROOM":
+                            ClientEventHandler.CreateRoom(rooms);
                             break;
                         case "CLOSE":
                             ClientEventHandler.HandleClientClosure(player, players);
