@@ -7,7 +7,6 @@ namespace NameTopia
     internal class Server
     {
         static int PlayersCount = 0;
-        static int RoomsCount = 0;
 
         static List<string> Categories = new List<string>();
         static List<Player> players = new List<Player>();
@@ -69,7 +68,10 @@ namespace NameTopia
                             ClientEventHandler.GetRooms(player, rooms);
                             break;
                         case "CREATE_ROOM":
-                            ClientEventHandler.CreateRoom(rooms);
+                            ClientEventHandler.CreateRoom(player, rooms);
+                            break;
+                        case "GET_CATEGORIES":
+                            ClientEventHandler.SendCategories(Categories, player);
                             break;
                         case "CLOSE":
                             ClientEventHandler.HandleClientClosure(player, players);

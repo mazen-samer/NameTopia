@@ -1,4 +1,5 @@
-﻿using SharedClasses;
+﻿using Newtonsoft.Json;
+using SharedClasses;
 
 namespace Client
 {
@@ -34,7 +35,30 @@ namespace Client
 
         private void createRoomButton_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            string chosenCategory = string.Empty;
+            StreamWriter writer = new StreamWriter(currentPlayer.Client.GetStream()) { AutoFlush = true };
+            StreamReader reader = new StreamReader(currentPlayer.Client.GetStream());
 
+            writer.WriteLine("GET_CATEGORIES");
+            string categoriesjson = reader.ReadLine();
+            List<string> categories = JsonConvert.DeserializeObject<List<string>>(categoriesjson);
+
+
+            CategorySelection categorySelection = new CategorySelection(categories);
+            categorySelection.ShowDialog();
+
+            if (categorySelection.DialogResult == DialogResult.OK)
+            {
+                chosenCategory = categorySelection.selectedCategory;
+                writer.WriteLine("CREATE_ROOM");
+                writer.WriteLine(chosenCategory);
+            }
+            else
+            {
+                MessageBox.Show("Category selection was canceled.");
+            }
+            this.Enabled = true;
         }
     }
 }
