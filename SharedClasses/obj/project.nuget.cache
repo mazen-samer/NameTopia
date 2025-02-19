@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ooF56vpvzJ8=",
+  "dgSpecHash": "/89pPtGvEWc=",
   "success": true,
-  "projectFilePath": "E:\\ITI\\C#\\NameTopia\\SharedClasses\\SharedClasses.csproj",
+  "projectFilePath": "C:\\Users\\Ramboo\\Desktop\\NameTopia\\SharedClasses\\SharedClasses.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\mazen\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Ramboo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

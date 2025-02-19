@@ -2,19 +2,25 @@
 {
     public class Room
     {
-        public int RoomID { get; private set; }
-        public Player PlayerOne { get; private set; }
-        public Player PlayerTwo { get; private set; }
-        public bool IsAvailable { get; private set; }
+        public int RoomID { get;  set; }
+        public Player PlayerOne { get;  set; }
+        public Player PlayerTwo { get;  set; }
+        public bool IsAvailable { get;  set; }
         public string Category { get; set; }
-        List<Player> Spectators { get; }
+        
+        public int SpectatorCount = 0;
 
+        public Room()
+        {
+
+        }
         public Room(int id, Player player, string category)
         {
             RoomID = id;
             PlayerOne = player;
             Category = category;
-            IsAvailable = true;
+            Player? playerTwo = PlayerTwo;
+            
         }
         public override string ToString()
         {
