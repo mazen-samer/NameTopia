@@ -21,3 +21,4 @@ E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.csproj.Up2Date
 E:\ITI\C#\NameTopia\Client\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.ViewRooms.resources
 E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.sourcelink.json
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.CategorySelection.resources
