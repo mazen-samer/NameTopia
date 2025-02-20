@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Ramboo\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Ramboo\\.nuget\\packages",
+      "C:\\Users\\mazen\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\mazen\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

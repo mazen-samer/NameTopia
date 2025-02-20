@@ -84,7 +84,6 @@
             flowLayoutPanelRooms.Name = "flowLayoutPanelRooms";
             flowLayoutPanelRooms.Size = new Size(676, 243);
             flowLayoutPanelRooms.TabIndex = 5;
-            flowLayoutPanelRooms.Paint += flowLayoutPanel1_Paint;
             // 
             // ViewRooms
             // 
