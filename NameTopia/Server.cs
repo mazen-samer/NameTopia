@@ -1,102 +1,63 @@
 ﻿using System.Net;
 using System.Net.Sockets;
+using Newtonsoft.Json;
 using Server;
 using SharedClasses;
 namespace NameTopia
 {
     internal class Server
     {
-        static int PlayersCount = 0;
-
         static List<string> Categories = new List<string>();
         static List<Player> players = new List<Player>();
-        //static List<Room> rooms = new List<Room>();
+        static List<Room> rooms = new List<Room>();
 
-        /// <summary>
-        /// This was for testing purposes ==> the constructor was edited --  check SharedClasses for more
-        /// </summary> 
-        static Player mazen = new Player(1, "Mazen", null);
-        static Player ramadan = new Player(2, "Ramadan", null);
-        static Player gohamy = new Player(3, "Gohamy", null);
-        static Player player4 = new Player(4, "Player4", null);
-        static Player player5 = new Player(5, "Player5", null);
 
-        //static List<Room> rooms = new List<Room>
-        //{
-        //    new Room { PlayerOne = mazen, PlayerTwo = ramadan, IsAvailable = false },
-        //    new Room { PlayerOne = gohamy, PlayerTwo = player4, IsAvailable = true },
-        //    new Room { PlayerOne = player5, PlayerTwo = null, IsAvailable = true }
-        //};
-        static List<Room> rooms = new List<Room>
-        {
-            new Room {RoomID = 1 , PlayerOne = mazen, PlayerTwo = ramadan },
-            new Room {RoomID = 2, PlayerOne = gohamy, PlayerTwo = player4, IsAvailable = true },
-            new Room {RoomID = 3, PlayerOne = gohamy, PlayerTwo = player4, IsAvailable = true } ,
-            new Room {RoomID = 4 , PlayerOne = mazen, PlayerTwo = ramadan }
-        };
         static readonly object lockObj = new object();
 
 
         static void ProcessClientRequests(TcpClient tcpClient)
         {
             StreamReader reader = null;
-            StreamWriter writer = null;
-            Player player = null;
             bool connectionClosed = false;
 
             try
             {
-                NetworkStream stream = tcpClient.GetStream();
-                reader = new StreamReader(stream);
-                writer = new StreamWriter(stream) { AutoFlush = true };
-
-                string playerName = reader.ReadLine();
-                if (string.IsNullOrEmpty(playerName))
-                {
-                    Console.WriteLine("Client disconnected before sending player name");
-                    return;
-                }
-
-                lock (lockObj)
-                {
-                    player = new Player(++PlayersCount, playerName, tcpClient);
-                    players.Add(player);
-                }
-                Console.WriteLine($"Welcome to the game {playerName}!");
+                reader = new StreamReader(tcpClient.GetStream());
                 string command;
                 while ((command = reader.ReadLine()) != null)
                 {
-                    switch (command)
+                    Command currentCommand = JsonConvert.DeserializeObject<Command>(command);
+                    switch (currentCommand.CommandType)
                     {
-                        case "REQUEST_PLAYER_DATA":
-                            ClientEventHandler.RequestPlayerData(writer, player);
+                        case CommandType.CREATE_PLAYER:
+                            ClientEventHandler.CreatePlayer(tcpClient, players, currentCommand);
                             break;
-                        case "GET_ROOMS":
-                            ClientEventHandler.GetRooms(player, rooms);
+                        case CommandType.GET_ROOMS:
+                            ClientEventHandler.GetRooms(tcpClient, rooms);
                             break;
-                        case "CREATE_ROOM":
-                            ClientEventHandler.CreateRoom(player, rooms);
+                        case CommandType.CREATE_ROOM:
+                            ClientEventHandler.CreateRoom(tcpClient, rooms, currentCommand, players);
                             break;
-                        case "GET_CATEGORIES":
-                            ClientEventHandler.SendCategories(Categories, player);
+                        case CommandType.GET_CATEGORIES:
+                            ClientEventHandler.SendCategories(Categories, tcpClient);
                             break;
-                        case "CLOSE":
-                            ClientEventHandler.HandleClientClosure(player, players);
+                        case CommandType.CLOSE:
+                            ClientEventHandler.HandleClientClosure(tcpClient, players);
                             connectionClosed = true;
                             return;
                         default:
-                            writer.WriteLine("Unknown command. Available commands: GET_ROOMS, CLOSE");
+                            Console.WriteLine("Unknown command. Available commands: GET_ROOMS, CLOSE");
                             break;
                     }
                 }
 
                 // If we exit the loop normally, mark the connection as closed
                 connectionClosed = true;
-                Console.WriteLine($"Connection closed normally with {playerName}");
+                Console.WriteLine("Connection closed normally.");
             }
             catch (IOException ex)
             {
-                Console.WriteLine($"Connection with player was forcibly closed: {ex.Message}");
+                Console.WriteLine($"Connection was forcibly closed: {ex.Message}");
                 connectionClosed = true;
             }
             catch (Exception ex)
@@ -105,21 +66,10 @@ namespace NameTopia
             }
             finally
             {
-                if (!connectionClosed)
+                if (!connectionClosed && tcpClient.Connected)
                 {
-                    if (player != null)
-                    {
-                        lock (lockObj)
-                        {
-                            players.Remove(player);
-                        }
-                        Console.WriteLine($"Connection closed with {player.Name}");
-                    }
-
-                    if (tcpClient.Connected)
-                    {
-                        tcpClient.Close();
-                    }
+                    tcpClient.Close();
+                    Console.WriteLine("Connection closed.");
                 }
             }
         }
