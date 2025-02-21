@@ -135,7 +135,8 @@ namespace Client
                 string commandJson = JsonConvert.SerializeObject(command);
                 sw.WriteLine(commandJson);
             }
-            this.DialogResult = DialogResult.Cancel;
+            currentPlayer.Client.Close();
+            this.Owner.Show();
             this.Close();
         }
 
@@ -169,5 +170,16 @@ namespace Client
             }
         }
 
+        private void ViewRooms_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            using (StreamWriter sw = new StreamWriter(currentPlayer.Client.GetStream()))
+            {
+                Command command = new Command { CommandType = CommandType.CLOSE };
+                string commandJson = JsonConvert.SerializeObject(command);
+                sw.WriteLine(commandJson);
+                currentPlayer.Client.Close();
+            }
+            this.Owner.Show();
+        }
     }
 }

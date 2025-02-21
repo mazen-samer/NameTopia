@@ -32,7 +32,6 @@ namespace Client
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error while listening for messages: {ex.Message}");
             }
         }
 
@@ -50,17 +49,28 @@ namespace Client
                     Player player = command.Player;
                     player.Client = tcpClient;
                     playerForm = new ViewRooms(player);
+                    playerForm.Owner = this;
                     playerForm.Show();
                     this.Hide();
                     break;
+
                 case CommandType.RECIEVE_ROOMS:
-                    playerForm.DisplayRooms(command.Rooms);
+                    playerForm?.DisplayRooms(command.Rooms);
                     break;
+
                 case CommandType.SEND_CATEGORIES:
                     // command contains the categories list
-                    playerForm.assignCategoriesAndOpenDialog(command.Categories);
+                    playerForm?.assignCategoriesAndOpenDialog(command.Categories);
                     break;
             }
+        }
+        private void PlayerForm_CloseConnectionRequested(object sender, EventArgs e)
+        {
+            // Close the TCP connection.
+            tcpClient?.Close();
+
+            // Optionally, close the owner form (ensure thread-safety if needed).
+            this.Invoke(new Action(() => this.Close()));
         }
 
         private void connectButton_click(object sender, EventArgs e)
