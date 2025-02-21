@@ -1,0 +1,11 @@
+E:\ITI\C#\NameTopia\Classes Template\bin\Debug\net8.0\Classes Template.deps.json
+E:\ITI\C#\NameTopia\Classes Template\bin\Debug\net8.0\Classes Template.dll
+E:\ITI\C#\NameTopia\Classes Template\bin\Debug\net8.0\Classes Template.pdb
+E:\ITI\C#\NameTopia\Classes Template\obj\Debug\net8.0\Classes Template.GeneratedMSBuildEditorConfig.editorconfig
+E:\ITI\C#\NameTopia\Classes Template\obj\Debug\net8.0\Classes Template.AssemblyInfoInputs.cache
+E:\ITI\C#\NameTopia\Classes Template\obj\Debug\net8.0\Classes Template.AssemblyInfo.cs
+E:\ITI\C#\NameTopia\Classes Template\obj\Debug\net8.0\Classes Template.csproj.CoreCompileInputs.cache
+E:\ITI\C#\NameTopia\Classes Template\obj\Debug\net8.0\Classes Template.dll
+E:\ITI\C#\NameTopia\Classes Template\obj\Debug\net8.0\refint\Classes Template.dll
+E:\ITI\C#\NameTopia\Classes Template\obj\Debug\net8.0\Classes Template.pdb
+E:\ITI\C#\NameTopia\Classes Template\obj\Debug\net8.0\ref\Classes Template.dll

@@ -1,0 +1,74 @@
+E:\ITI\C#\NameTopia\Client\bin\Debug\net8.0-windows\Client.exe
+E:\ITI\C#\NameTopia\Client\bin\Debug\net8.0-windows\Client.deps.json
+E:\ITI\C#\NameTopia\Client\bin\Debug\net8.0-windows\Client.runtimeconfig.json
+E:\ITI\C#\NameTopia\Client\bin\Debug\net8.0-windows\Client.dll
+E:\ITI\C#\NameTopia\Client\bin\Debug\net8.0-windows\Client.pdb
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.csproj.GenerateResource.cache
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.GeneratedMSBuildEditorConfig.editorconfig
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.AssemblyInfoInputs.cache
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.AssemblyInfo.cs
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.csproj.CoreCompileInputs.cache
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.dll
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\refint\Client.dll
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.pdb
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.genruntimeconfig.cache
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\ref\Client.dll
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.EntryPoint.resources
+E:\ITI\C#\NameTopia\Client\bin\Debug\net8.0-windows\SharedClasses.dll
+E:\ITI\C#\NameTopia\Client\bin\Debug\net8.0-windows\SharedClasses.pdb
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.csproj.AssemblyReference.cache
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.csproj.Up2Date
+E:\ITI\C#\NameTopia\Client\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.ViewRooms.resources
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.sourcelink.json
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.CategorySelection.resources
+C:\Users\Ramboo\Desktop\NameTopia\Client\bin\Debug\net8.0-windows\Client.exe
+C:\Users\Ramboo\Desktop\NameTopia\Client\bin\Debug\net8.0-windows\Client.deps.json
+C:\Users\Ramboo\Desktop\NameTopia\Client\bin\Debug\net8.0-windows\Client.runtimeconfig.json
+C:\Users\Ramboo\Desktop\NameTopia\Client\bin\Debug\net8.0-windows\Client.dll
+C:\Users\Ramboo\Desktop\NameTopia\Client\bin\Debug\net8.0-windows\Client.pdb
+C:\Users\Ramboo\Desktop\NameTopia\Client\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Ramboo\Desktop\NameTopia\Client\bin\Debug\net8.0-windows\SharedClasses.dll
+C:\Users\Ramboo\Desktop\NameTopia\Client\bin\Debug\net8.0-windows\SharedClasses.pdb
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.csproj.AssemblyReference.cache
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.CategorySelection.resources
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.EntryPoint.resources
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.ViewRooms.resources
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.csproj.GenerateResource.cache
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.AssemblyInfoInputs.cache
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.AssemblyInfo.cs
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.csproj.CoreCompileInputs.cache
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.sourcelink.json
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.csproj.Up2Date
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.dll
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\refint\Client.dll
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.pdb
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.genruntimeconfig.cache
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\ref\Client.dll
+C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.Resource1.resources
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.Resource1.resources
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\bin\Debug\net8.0-windows\Client.exe
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\bin\Debug\net8.0-windows\Client.deps.json
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\bin\Debug\net8.0-windows\Client.runtimeconfig.json
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\bin\Debug\net8.0-windows\Client.dll
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\bin\Debug\net8.0-windows\Client.pdb
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\bin\Debug\net8.0-windows\SharedClasses.dll
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\bin\Debug\net8.0-windows\SharedClasses.pdb
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\Client.csproj.AssemblyReference.cache
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\Client.CategorySelection.resources
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\Client.EntryPoint.resources
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\Client.Resource1.resources
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\Client.ViewRooms.resources
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\Client.csproj.GenerateResource.cache
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\Client.AssemblyInfoInputs.cache
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\Client.AssemblyInfo.cs
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\Client.csproj.CoreCompileInputs.cache
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\Client.csproj.Up2Date
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\Client.dll
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\refint\Client.dll
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\Client.pdb
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\Client.genruntimeconfig.cache
+C:\Users\Ahmed Mahmoud\Downloads\NameTopia-master (1)\NameTopia-master\Client\obj\Debug\net8.0-windows\ref\Client.dll

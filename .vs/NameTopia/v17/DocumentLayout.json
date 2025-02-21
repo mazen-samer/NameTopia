@@ -1,0 +1,212 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|c:\\users\\ahmed mahmoud\\downloads\\nametopia-master (1)\\nametopia-master\\client\\entrypoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|solutionrelative:client\\entrypoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|c:\\users\\ahmed mahmoud\\downloads\\nametopia-master (1)\\nametopia-master\\client\\viewrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|solutionrelative:client\\viewrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|c:\\users\\ahmed mahmoud\\downloads\\nametopia-master (1)\\nametopia-master\\client\\viewrooms.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|solutionrelative:client\\viewrooms.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25E7F1BC-959E-4208-B56B-B445DC2DC5B9}|NameTopia\\Server.csproj|c:\\users\\ahmed mahmoud\\downloads\\nametopia-master (1)\\nametopia-master\\nametopia\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25E7F1BC-959E-4208-B56B-B445DC2DC5B9}|NameTopia\\Server.csproj|solutionrelative:nametopia\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\client\\viewrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|solutionrelative:client\\viewrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA9DC8BD-2210-497D-B333-EE15E28DC3E1}|SharedClasses\\SharedClasses.csproj|c:\\users\\ahmed mahmoud\\downloads\\nametopia-master (1)\\nametopia-master\\sharedclasses\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA9DC8BD-2210-497D-B333-EE15E28DC3E1}|SharedClasses\\SharedClasses.csproj|solutionrelative:sharedclasses\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25E7F1BC-959E-4208-B56B-B445DC2DC5B9}|NameTopia\\Server.csproj|c:\\users\\ahmed mahmoud\\downloads\\nametopia-master (1)\\nametopia-master\\nametopia\\clienteventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25E7F1BC-959E-4208-B56B-B445DC2DC5B9}|NameTopia\\Server.csproj|solutionrelative:nametopia\\clienteventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA9DC8BD-2210-497D-B333-EE15E28DC3E1}|SharedClasses\\SharedClasses.csproj|c:\\users\\ahmed mahmoud\\downloads\\nametopia-master (1)\\nametopia-master\\sharedclasses\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA9DC8BD-2210-497D-B333-EE15E28DC3E1}|SharedClasses\\SharedClasses.csproj|solutionrelative:sharedclasses\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA9DC8BD-2210-497D-B333-EE15E28DC3E1}|SharedClasses\\SharedClasses.csproj|c:\\users\\ahmed mahmoud\\downloads\\nametopia-master (1)\\nametopia-master\\sharedclasses\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA9DC8BD-2210-497D-B333-EE15E28DC3E1}|SharedClasses\\SharedClasses.csproj|solutionrelative:sharedclasses\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|c:\\users\\ahmed mahmoud\\downloads\\nametopia-master (1)\\nametopia-master\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|c:\\users\\ahmed mahmoud\\downloads\\nametopia-master (1)\\nametopia-master\\client\\client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|solutionrelative:client\\client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\client\\entrypoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|solutionrelative:client\\entrypoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ViewRooms.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\Client\\ViewRooms.cs",
+              "RelativeDocumentMoniker": "Client\\ViewRooms.cs",
+              "ToolTip": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\Client\\ViewRooms.cs",
+              "RelativeToolTip": "Client\\ViewRooms.cs",
+              "ViewState": "AQIAAK0AAAAAAAAAAAAuwLUAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T19:07:35.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EntryPoint.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\Client\\EntryPoint.cs",
+              "RelativeDocumentMoniker": "Client\\EntryPoint.cs",
+              "ToolTip": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\Client\\EntryPoint.cs",
+              "RelativeToolTip": "Client\\EntryPoint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T21:37:21.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Server.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\NameTopia\\Server.cs",
+              "RelativeDocumentMoniker": "NameTopia\\Server.cs",
+              "ToolTip": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\NameTopia\\Server.cs",
+              "RelativeToolTip": "NameTopia\\Server.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAIA0wBEAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T15:35:36.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Command.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\SharedClasses\\Command.cs",
+              "RelativeDocumentMoniker": "SharedClasses\\Command.cs",
+              "ToolTip": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\SharedClasses\\Command.cs",
+              "RelativeToolTip": "SharedClasses\\Command.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAA7wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T22:49:51.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\SharedClasses\\Player.cs",
+              "RelativeDocumentMoniker": "SharedClasses\\Player.cs",
+              "ToolTip": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\SharedClasses\\Player.cs",
+              "RelativeToolTip": "SharedClasses\\Player.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAkwBIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T15:15:32.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\SharedClasses\\Room.cs",
+              "RelativeDocumentMoniker": "SharedClasses\\Room.cs",
+              "ToolTip": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\SharedClasses\\Room.cs",
+              "RelativeToolTip": "SharedClasses\\Room.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T19:27:57.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ViewRooms.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\Client\\ViewRooms.Designer.cs",
+              "RelativeDocumentMoniker": "Client\\ViewRooms.Designer.cs",
+              "ToolTip": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\Client\\ViewRooms.Designer.cs",
+              "RelativeToolTip": "Client\\ViewRooms.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T01:14:12.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ViewRooms.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\Client\\ViewRooms.cs",
+              "RelativeDocumentMoniker": "Client\\ViewRooms.cs",
+              "ToolTip": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\Client\\ViewRooms.cs [Design]",
+              "RelativeToolTip": "Client\\ViewRooms.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T00:18:57.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClientEventHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\NameTopia\\ClientEventHandler.cs",
+              "RelativeDocumentMoniker": "NameTopia\\ClientEventHandler.cs",
+              "ToolTip": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\NameTopia\\ClientEventHandler.cs",
+              "RelativeToolTip": "NameTopia\\ClientEventHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T01:53:26.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Client.csproj",
+              "DocumentMoniker": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\Client\\Client.csproj",
+              "RelativeDocumentMoniker": "Client\\Client.csproj",
+              "ToolTip": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\Client\\Client.csproj",
+              "RelativeToolTip": "Client\\Client.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-21T15:37:17.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\Client\\Program.cs",
+              "RelativeDocumentMoniker": "Client\\Program.cs",
+              "ToolTip": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\Client\\Program.cs",
+              "RelativeToolTip": "Client\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T16:18:39.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EntryPoint.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\Client\\EntryPoint.cs",
+              "RelativeDocumentMoniker": "Client\\EntryPoint.cs",
+              "ToolTip": "C:\\Users\\Ahmed Mahmoud\\Downloads\\NameTopia-master (1)\\NameTopia-master\\Client\\EntryPoint.cs [Design]",
+              "RelativeToolTip": "Client\\EntryPoint.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T21:37:19.088Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
