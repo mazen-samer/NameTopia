@@ -158,7 +158,6 @@ namespace Client
             {
                 chosenCategory = categorySelection.selectedCategory;
                 Room room = new Room(currentPlayer, chosenCategory);
-                string roomString = JsonConvert.SerializeObject(room);
                 newCommand.CommandType = CommandType.CREATE_ROOM;
                 newCommand.Room = room;
                 string commandjson = JsonConvert.SerializeObject(newCommand);

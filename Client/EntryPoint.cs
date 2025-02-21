@@ -10,6 +10,7 @@ namespace Client
         private StreamReader reader;
         private Thread listeningThread;
         ViewRooms playerForm;
+        GameForm gameForm;
 
         public EntryPoint()
         {
@@ -61,6 +62,10 @@ namespace Client
                 case CommandType.SEND_CATEGORIES:
                     // command contains the categories list
                     playerForm?.assignCategoriesAndOpenDialog(command.Categories);
+                    break;
+                case CommandType.START_GAME:
+                    gameForm = new GameForm(command.Room);
+                    gameForm.Show();
                     break;
             }
         }

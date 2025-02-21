@@ -8,6 +8,8 @@
         public bool IsAvailable { get; set; }
         public string Category { get; set; }
 
+        public GameManager GameManager { get; set; }
+        public List<Player> spectators { get; }
         public int SpectatorCount = 0;
 
         public Room()

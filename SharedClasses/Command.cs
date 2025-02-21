@@ -13,6 +13,7 @@
         SEND_PLAYER,
         RECIEVE_ROOMS,
         SEND_CATEGORIES,
+        START_GAME,
     }
     public class Command
     {

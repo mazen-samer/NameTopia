@@ -58,6 +58,8 @@ namespace Server
         }
         public static void CreateRoom(TcpClient client, List<Room> rooms, Command command, List<Player> players)
         {
+            StreamWriter writer = new StreamWriter(client.GetStream()) { AutoFlush = true };
+
             Room room = command.Room;
             lock (lockObj)
             {
@@ -77,14 +79,18 @@ namespace Server
             {
                 try
                 {
-                    StreamWriter writer = new StreamWriter(player.Client.GetStream()) { AutoFlush = true };
-                    writer.WriteLine(JsonConvert.SerializeObject(command2));
+                    StreamWriter writerLocal = new StreamWriter(player.Client.GetStream()) { AutoFlush = true };
+                    writerLocal.WriteLine(JsonConvert.SerializeObject(command2));
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Error sending update to player {player.ID}: {ex.Message}");
                 }
             }
+            Command command1 = new Command();
+            command1.CommandType = CommandType.START_GAME;
+            command1.Room = room;
+            writer.WriteLine(JsonConvert.SerializeObject(command1));
         }
     }
 }

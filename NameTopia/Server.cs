@@ -12,9 +12,6 @@ namespace NameTopia
         static List<Room> rooms = new List<Room>();
 
 
-        static readonly object lockObj = new object();
-
-
         static void ProcessClientRequests(TcpClient tcpClient)
         {
             StreamReader reader = null;
@@ -46,7 +43,7 @@ namespace NameTopia
                             connectionClosed = true;
                             return;
                         default:
-                            Console.WriteLine("Unknown command. Available commands: GET_ROOMS, CLOSE");
+                            Console.WriteLine("Unknown command.");
                             break;
                     }
                 }
