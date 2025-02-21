@@ -48,3 +48,28 @@ C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.genrunt
 C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\ref\Client.dll
 C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.Resource1.resources
 E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.Resource1.resources
+F:\final proj\NameTopia\Client\bin\Debug\net8.0-windows\Client.exe
+F:\final proj\NameTopia\Client\bin\Debug\net8.0-windows\Client.deps.json
+F:\final proj\NameTopia\Client\bin\Debug\net8.0-windows\Client.runtimeconfig.json
+F:\final proj\NameTopia\Client\bin\Debug\net8.0-windows\Client.dll
+F:\final proj\NameTopia\Client\bin\Debug\net8.0-windows\Client.pdb
+F:\final proj\NameTopia\Client\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+F:\final proj\NameTopia\Client\bin\Debug\net8.0-windows\SharedClasses.dll
+F:\final proj\NameTopia\Client\bin\Debug\net8.0-windows\SharedClasses.pdb
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.csproj.AssemblyReference.cache
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.CategorySelection.resources
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.EntryPoint.resources
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.Resource1.resources
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.ViewRooms.resources
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.csproj.GenerateResource.cache
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.GeneratedMSBuildEditorConfig.editorconfig
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.AssemblyInfoInputs.cache
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.AssemblyInfo.cs
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.csproj.CoreCompileInputs.cache
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.sourcelink.json
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.csproj.Up2Date
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.dll
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\refint\Client.dll
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.pdb
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\Client.genruntimeconfig.cache
+F:\final proj\NameTopia\Client\obj\Debug\net8.0-windows\ref\Client.dll

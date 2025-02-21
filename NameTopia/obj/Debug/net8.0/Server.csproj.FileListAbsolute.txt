@@ -38,3 +38,23 @@ C:\Users\Ramboo\Desktop\NameTopia\NameTopia\obj\Debug\net8.0\refint\Server.dll
 C:\Users\Ramboo\Desktop\NameTopia\NameTopia\obj\Debug\net8.0\Server.pdb
 C:\Users\Ramboo\Desktop\NameTopia\NameTopia\obj\Debug\net8.0\Server.genruntimeconfig.cache
 C:\Users\Ramboo\Desktop\NameTopia\NameTopia\obj\Debug\net8.0\ref\Server.dll
+F:\final proj\NameTopia\NameTopia\bin\Debug\net8.0\Server.exe
+F:\final proj\NameTopia\NameTopia\bin\Debug\net8.0\Server.deps.json
+F:\final proj\NameTopia\NameTopia\bin\Debug\net8.0\Server.runtimeconfig.json
+F:\final proj\NameTopia\NameTopia\bin\Debug\net8.0\Server.dll
+F:\final proj\NameTopia\NameTopia\bin\Debug\net8.0\Server.pdb
+F:\final proj\NameTopia\NameTopia\bin\Debug\net8.0\Newtonsoft.Json.dll
+F:\final proj\NameTopia\NameTopia\bin\Debug\net8.0\SharedClasses.dll
+F:\final proj\NameTopia\NameTopia\bin\Debug\net8.0\SharedClasses.pdb
+F:\final proj\NameTopia\NameTopia\obj\Debug\net8.0\Server.csproj.AssemblyReference.cache
+F:\final proj\NameTopia\NameTopia\obj\Debug\net8.0\Server.GeneratedMSBuildEditorConfig.editorconfig
+F:\final proj\NameTopia\NameTopia\obj\Debug\net8.0\Server.AssemblyInfoInputs.cache
+F:\final proj\NameTopia\NameTopia\obj\Debug\net8.0\Server.AssemblyInfo.cs
+F:\final proj\NameTopia\NameTopia\obj\Debug\net8.0\Server.csproj.CoreCompileInputs.cache
+F:\final proj\NameTopia\NameTopia\obj\Debug\net8.0\Server.sourcelink.json
+F:\final proj\NameTopia\NameTopia\obj\Debug\net8.0\Server.csproj.Up2Date
+F:\final proj\NameTopia\NameTopia\obj\Debug\net8.0\Server.dll
+F:\final proj\NameTopia\NameTopia\obj\Debug\net8.0\refint\Server.dll
+F:\final proj\NameTopia\NameTopia\obj\Debug\net8.0\Server.pdb
+F:\final proj\NameTopia\NameTopia\obj\Debug\net8.0\Server.genruntimeconfig.cache
+F:\final proj\NameTopia\NameTopia\obj\Debug\net8.0\ref\Server.dll

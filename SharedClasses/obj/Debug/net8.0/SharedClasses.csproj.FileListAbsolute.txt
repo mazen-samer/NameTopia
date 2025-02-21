@@ -24,3 +24,16 @@ C:\Users\Ramboo\Desktop\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.d
 C:\Users\Ramboo\Desktop\NameTopia\SharedClasses\obj\Debug\net8.0\refint\SharedClasses.dll
 C:\Users\Ramboo\Desktop\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.pdb
 C:\Users\Ramboo\Desktop\NameTopia\SharedClasses\obj\Debug\net8.0\ref\SharedClasses.dll
+F:\final proj\NameTopia\SharedClasses\bin\Debug\net8.0\SharedClasses.deps.json
+F:\final proj\NameTopia\SharedClasses\bin\Debug\net8.0\SharedClasses.dll
+F:\final proj\NameTopia\SharedClasses\bin\Debug\net8.0\SharedClasses.pdb
+F:\final proj\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.csproj.AssemblyReference.cache
+F:\final proj\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.GeneratedMSBuildEditorConfig.editorconfig
+F:\final proj\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.AssemblyInfoInputs.cache
+F:\final proj\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.AssemblyInfo.cs
+F:\final proj\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.csproj.CoreCompileInputs.cache
+F:\final proj\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.sourcelink.json
+F:\final proj\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.dll
+F:\final proj\NameTopia\SharedClasses\obj\Debug\net8.0\refint\SharedClasses.dll
+F:\final proj\NameTopia\SharedClasses\obj\Debug\net8.0\SharedClasses.pdb
+F:\final proj\NameTopia\SharedClasses\obj\Debug\net8.0\ref\SharedClasses.dll

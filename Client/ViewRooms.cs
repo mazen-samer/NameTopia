@@ -129,15 +129,40 @@ namespace Client
 
         public void closeButton_Click(object sender, EventArgs e)
         {
-            using (StreamWriter sw = new StreamWriter(currentPlayer.Client.GetStream()))
+            try
             {
-                Command command = new Command { CommandType = CommandType.CLOSE };
-                string commandJson = JsonConvert.SerializeObject(command);
-                sw.WriteLine(commandJson);
+                if (currentPlayer.Client.Connected)
+                {
+                    using (StreamWriter sw = new StreamWriter(currentPlayer.Client.GetStream()))
+                    {
+                        Command command = new Command { CommandType = CommandType.CLOSE };
+                        string commandJson = JsonConvert.SerializeObject(command);
+                        sw.WriteLine(commandJson);
+                    }
+                }
+
+                currentPlayer.Client.Close();
             }
-            currentPlayer.Client.Close();
-            this.Owner.Show();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while closing connection: " + ex.Message);
+            }
+
+            if (this.Owner != null)
+            {
+                this.Owner.Show();
+            }
+
             this.Close();
+            //using (StreamWriter sw = new StreamWriter(currentPlayer.Client.GetStream()))
+            //{
+            //    Command command = new Command { CommandType = CommandType.CLOSE };
+            //    string commandJson = JsonConvert.SerializeObject(command);
+            //    sw.WriteLine(commandJson);
+            //}
+            //currentPlayer.Client.Close();
+            //this.Owner.Show();
+            //this.Close();
         }
 
         private void createRoomButton_Click(object sender, EventArgs e)
@@ -172,14 +197,37 @@ namespace Client
 
         private void ViewRooms_FormClosing(object sender, FormClosingEventArgs e)
         {
-            using (StreamWriter sw = new StreamWriter(currentPlayer.Client.GetStream()))
+            try
             {
-                Command command = new Command { CommandType = CommandType.CLOSE };
-                string commandJson = JsonConvert.SerializeObject(command);
-                sw.WriteLine(commandJson);
-                currentPlayer.Client.Close();
+                if (currentPlayer.Client.Connected)
+                {
+                    using (StreamWriter sw = new StreamWriter(currentPlayer.Client.GetStream()))
+                    {
+                        Command command = new Command { CommandType = CommandType.CLOSE };
+                        string commandJson = JsonConvert.SerializeObject(command);
+                        sw.WriteLine(commandJson);
+                    }
+
+                    currentPlayer.Client.Close();
+                }
             }
-            this.Owner.Show();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while closing connection: " + ex.Message);
+            }
+
+            if (this.Owner != null)
+            {
+                this.Owner.Show();
+            }
+            //using (StreamWriter sw = new StreamWriter(currentPlayer.Client.GetStream()))
+            //{
+            //    Command command = new Command { CommandType = CommandType.CLOSE };
+            //    string commandJson = JsonConvert.SerializeObject(command);
+            //    sw.WriteLine(commandJson);
+            //    currentPlayer.Client.Close();
+            //}
+            //this.Owner.Show();
         }
     }
 }
