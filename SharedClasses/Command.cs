@@ -20,6 +20,7 @@
 
         // both
         UPDATE_GAME_STATUS,
+        GAME_OVER,
     }
     public class Command
     {
@@ -32,6 +33,8 @@
         public string PlayerName { get; set; }
         public string PressedLetter { get; set; }
         public string GameText { get; set; }
+        public string Winner { get; set; }
+        public Player Loser { get; set; }
 
         public Command() { }
 

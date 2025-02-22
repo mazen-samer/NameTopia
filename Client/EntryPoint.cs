@@ -7,10 +7,12 @@ namespace Client
     public partial class EntryPoint : Form
     {
         private TcpClient tcpClient;
+        Player player;
         private StreamReader reader;
         private Thread listeningThread;
         ViewRooms playerForm;
         ViewGame viewGame;
+
 
         public EntryPoint()
         {
@@ -47,7 +49,7 @@ namespace Client
             switch (command.CommandType)
             {
                 case CommandType.SEND_PLAYER:
-                    Player player = command.Player;
+                    player = command.Player;
                     player.Client = tcpClient;
                     playerForm = new ViewRooms(player);
                     playerForm.Owner = this;
@@ -65,7 +67,7 @@ namespace Client
                     break;
 
                 case CommandType.START_GAME:
-                    viewGame = new ViewGame(command.Room, command.Room.PlayerOne.Name, tcpClient);
+                    viewGame = new ViewGame(command.Room, command.Room.PlayerOne.Name, player);
                     viewGame.Show();
                     break;
                 //This function is just for the Owner of the Game updating that someone joined!!!
@@ -74,10 +76,13 @@ namespace Client
                     break;
                 //Guest Player
                 case CommandType.START_GAME_FOR_GUEST:
-                    viewGame = new ViewGame(command.Room, command.Room.PlayerTwo.Name, tcpClient);
+                    viewGame = new ViewGame(command.Room, command.Room.PlayerTwo.Name, player);
                     viewGame.Show();
                     break;
                 case CommandType.UPDATE_GAME_STATUS:
+                    viewGame.UpdateGameStatus(command);
+                    break;
+                case CommandType.GAME_OVER:
                     viewGame.UpdateGameStatus(command);
                     break;
             }

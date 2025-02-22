@@ -106,7 +106,8 @@ namespace Client
                 {
                     Text = "Spectate",
                     Location = new Point(210, 50),
-                    Size = new Size(90, 30)
+                    Size = new Size(90, 30),
+                    Enabled = room.isJoinable,
                 };
 
                 // Optionally, assign a spy icon if you have one in your resources:

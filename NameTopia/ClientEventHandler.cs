@@ -174,5 +174,61 @@ namespace Server
                 }
             }
         }
+        public static void NotifyWinner(Command command, List<Player> players, List<Room> rooms)
+        {
+            // Find the other player in the room
+            Player otherPlayer = null;
+
+            if (command.Player.ID == command.Room.PlayerOne.ID)
+            {
+                otherPlayer = command.Room.PlayerTwo;
+            }
+            else if (command.Player.ID == command.Room.PlayerTwo.ID)
+            {
+                otherPlayer = command.Room.PlayerOne;
+            }
+
+            // If the other player is found, send the message to their TCP client
+            if (otherPlayer != null)
+            {
+                // Iterate through the players list to find the other player's TCP client
+                foreach (Player player in players)
+                {
+                    if (player.ID == otherPlayer.ID && player.Client != null)
+                    {
+                        StreamWriter writer = new StreamWriter(player.Client.GetStream()) { AutoFlush = true };
+                        writer.WriteLine(JsonConvert.SerializeObject(command));
+                        break; // Exit the loop once the other player is found
+                    }
+                }
+            }
+            lock (lockObj)
+            {
+                for (int i = 0; i < rooms.Count; i++)
+                {
+                    if (rooms[i].RoomID == command.Room.RoomID)
+                    {
+                        rooms[i] = command.Room;
+                    }
+                }
+            }
+            Console.WriteLine(command.Room.ToString());
+            Command command2 = new Command();
+            command2.CommandType = CommandType.RECIEVE_ROOMS;
+            command2.Rooms = rooms;
+
+            foreach (Player player in players)
+            {
+                try
+                {
+                    StreamWriter writer = new StreamWriter(player.Client.GetStream()) { AutoFlush = true };
+                    writer.WriteLine(JsonConvert.SerializeObject(command2));
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error sending update to player {player.ID}: {ex.Message}");
+                }
+            }
+        }
     }
 }

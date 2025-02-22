@@ -47,6 +47,9 @@ namespace NameTopia
                         case CommandType.UPDATE_GAME_STATUS:
                             ClientEventHandler.UpdateGameStatusForRoom(tcpClient, currentCommand, players);
                             break;
+                        case CommandType.GAME_OVER:
+                            ClientEventHandler.NotifyWinner(currentCommand, players, rooms);
+                            break;
                         case CommandType.CLOSE:
                             ClientEventHandler.HandleClientClosure(tcpClient, players);
                             connectionClosed = true;

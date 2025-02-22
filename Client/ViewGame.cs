@@ -10,13 +10,15 @@ namespace Client
         StringBuilder dashedWordBuilder;
         TcpClient client;
         Room room;
-        public ViewGame(Room room, string PlayerName, TcpClient tcpClient)
+        Player player;
+        public ViewGame(Room room, string PlayerName, Player player)
         {
             InitializeComponent();
             CreateKeyboardButtons();
             this.room = room;
             pagePlayerName.Text = PlayerName;
-            client = tcpClient;
+            this.player = player;
+            client = player.Client;
             OwnerName.Text = playerTurn.Text = room.PlayerOne.Name;
             GuestName.Text = room.PlayerTwo?.Name ?? "Waiting for another player to join...";
 
@@ -56,57 +58,94 @@ namespace Client
                 btn.Enabled = false;
                 string letter = btn.Tag.ToString();
 
-                // Update the displayed guessed word by revealing the pressed letter.
-                // We assume room.GuessedWord contains the complete word and 
-                // guessedWord.Text contains the current state (e.g., "_ _ _ _").
+                // Update the displayed guessed word
                 char[] displayedChars = guessedWord.Text.ToCharArray();
+                bool foundLetter = false;
+
                 for (int i = 0; i < room.GuessedWord.Length; i++)
                 {
-                    // Compare letters ignoring case
                     if (room.GuessedWord[i].ToString().Equals(letter, StringComparison.OrdinalIgnoreCase))
                     {
                         displayedChars[i] = room.GuessedWord[i];
+                        foundLetter = true;
                     }
                 }
+
                 string updatedGameText = new string(displayedChars);
                 guessedWord.Text = updatedGameText;
 
-                // Toggle player's turn.
+
+                Player loserPlayer = (room.PlayerTurn == PlayerTurn.OWNER) ? room.PlayerOne : room.PlayerTwo;
+
+                // Check if the word is fully guessed (win condition)
+                if (!updatedGameText.Contains('_'))
+                {
+                    string winner = playerTurn.Text;  // The last player who guessed correctly
+
+                    MessageBox.Show($"Congratulations {winner}, you won!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.room.isJoinable = false;
+                    // Send win status to the server
+                    Command winCommand = new Command
+                    {
+                        CommandType = CommandType.GAME_OVER,
+                        Room = this.room,
+                        GameText = updatedGameText,
+                        Winner = winner,
+                        Player = this.player,
+                    };
+
+                    StreamWriter writer = new StreamWriter(client.GetStream()) { AutoFlush = true };
+                    writer.WriteLine(JsonConvert.SerializeObject(winCommand));
+
+                    this.Hide();
+                }
+
+                // Toggle player's turn
                 this.Enabled = false;
                 if (room.PlayerTurn == PlayerTurn.OWNER)
                 {
                     room.PlayerTurn = PlayerTurn.GUEST;
                     this.room.TurnToPlay = this.room.PlayerTwo;
-                    playerTurn.Text = this.room.PlayerTwo.Name;  // Show next player's turn
+                    playerTurn.Text = this.room.PlayerTwo.Name;
                 }
                 else
                 {
                     room.PlayerTurn = PlayerTurn.OWNER;
                     this.room.TurnToPlay = this.room.PlayerOne;
-                    playerTurn.Text = this.room.PlayerOne.Name;  // Show next player's turn
+                    playerTurn.Text = this.room.PlayerOne.Name;
                 }
 
-                // Create a command with the updated game text.
-                Command command = new Command();
-                command.CommandType = CommandType.UPDATE_GAME_STATUS;
-                command.PressedLetter = letter;
-                command.Room = this.room;
-                command.GameText = updatedGameText;
-                StreamWriter writer = new StreamWriter(client.GetStream()) { AutoFlush = true };
-                writer.WriteLine(JsonConvert.SerializeObject(command));
+                // Send the updated game status to the server
+                Command command = new Command
+                {
+                    CommandType = CommandType.UPDATE_GAME_STATUS,
+                    PressedLetter = letter,
+                    Room = this.room,
+                    GameText = updatedGameText,
+                    Loser = loserPlayer
+                };
+
+                StreamWriter updateWriter = new StreamWriter(client.GetStream()) { AutoFlush = true };
+                updateWriter.WriteLine(JsonConvert.SerializeObject(command));
             }
         }
+
         public void UpdateGameStatus(Command command)
         {
             this.Enabled = true;
             guessedWord.Text = command.GameText;
-            this.room = command.Room;  // Update the entire room state
+            this.room = command.Room;
 
-            // Update the turn label based on who should play next
             playerTurn.Text = (command.Room.PlayerTurn == PlayerTurn.OWNER)
                 ? command.Room.PlayerOne.Name
                 : command.Room.PlayerTwo.Name;
+
             DisableKey(command.PressedLetter);
+            if (command.CommandType == CommandType.GAME_OVER)
+            {
+                MessageBox.Show($"Congratulations {command.Winner}, you won!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();  // Disable further interaction
+            }
         }
         private void DisableKey(string letter)
         {

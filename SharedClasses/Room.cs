@@ -14,11 +14,8 @@
         public string Category { get; set; }
         public string GuessedWord { get; set; }
         public PlayerTurn PlayerTurn { get; set; }
-
         public List<Player> Spectator { get; set; }
-
-        List<Player> players;
-
+        public bool isJoinable { get; set; }
         public Room()
         {
             PlayerTurn = PlayerTurn.OWNER;
@@ -28,6 +25,7 @@
         {
             PlayerOne = player;
             Category = category;
+            isJoinable = true;
         }
         public override string ToString()
         {
