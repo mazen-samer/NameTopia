@@ -10,6 +10,7 @@ namespace Client
         private StreamReader reader;
         private Thread listeningThread;
         ViewRooms playerForm;
+        ViewGame viewGame;
 
         public EntryPoint()
         {
@@ -61,6 +62,23 @@ namespace Client
                 case CommandType.SEND_CATEGORIES:
                     // command contains the categories list
                     playerForm?.assignCategoriesAndOpenDialog(command.Categories);
+                    break;
+
+                case CommandType.START_GAME:
+                    viewGame = new ViewGame(command.Room, command.Room.PlayerOne.Name, tcpClient);
+                    viewGame.Show();
+                    break;
+                //This function is just for the Owner of the Game updating that someone joined!!!
+                case CommandType.UPDATE_ROOM:
+                    viewGame?.UpdateRoom(command.Room);
+                    break;
+                //Guest Player
+                case CommandType.START_GAME_FOR_GUEST:
+                    viewGame = new ViewGame(command.Room, command.Room.PlayerTwo.Name, tcpClient);
+                    viewGame.Show();
+                    break;
+                case CommandType.UPDATE_GAME_STATUS:
+                    viewGame.UpdateGameStatus(command);
                     break;
             }
         }

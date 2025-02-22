@@ -1,29 +1,37 @@
 ﻿namespace SharedClasses
 {
+    public enum PlayerTurn
+    {
+        OWNER, GUEST
+    }
     public class Room
     {
+
         public int RoomID { get; set; }
         public Player PlayerOne { get; set; }
         public Player PlayerTwo { get; set; }
-        public bool IsAvailable { get; set; }
+        public Player TurnToPlay { get; set; }
         public string Category { get; set; }
+        public string GuessedWord { get; set; }
+        public PlayerTurn PlayerTurn { get; set; }
 
-        public int SpectatorCount = 0;
+        public List<Player> Spectator { get; set; }
+
+        List<Player> players;
 
         public Room()
         {
+            PlayerTurn = PlayerTurn.OWNER;
 
         }
         public Room(Player player, string category)
         {
             PlayerOne = player;
             Category = category;
-            Player? playerTwo = PlayerTwo;
-            IsAvailable = true;
         }
         public override string ToString()
         {
-            return $"Room: PlayerOne={PlayerOne?.Name}, PlayerTwo={PlayerTwo?.Name}, IsAvailable={IsAvailable}";
+            return $"RoomID={RoomID}, Guessed Word={GuessedWord}, PlayerOne={PlayerOne?.Name}, PlayerTwo={PlayerTwo?.Name}, Category={Category}";
         }
     }
 }

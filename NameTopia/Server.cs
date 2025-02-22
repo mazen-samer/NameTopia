@@ -41,6 +41,12 @@ namespace NameTopia
                         case CommandType.GET_CATEGORIES:
                             ClientEventHandler.SendCategories(Categories, tcpClient);
                             break;
+                        case CommandType.JOIN_ROOM:
+                            ClientEventHandler.JoinRoom(tcpClient, currentCommand, rooms, players);
+                            break;
+                        case CommandType.UPDATE_GAME_STATUS:
+                            ClientEventHandler.UpdateGameStatusForRoom(tcpClient, currentCommand, players);
+                            break;
                         case CommandType.CLOSE:
                             ClientEventHandler.HandleClientClosure(tcpClient, players);
                             connectionClosed = true;

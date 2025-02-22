@@ -74,7 +74,7 @@ namespace Client
                 // Label for Spectator Count
                 Label lblSpectators = new Label
                 {
-                    Text = $"Spectators: {room.SpectatorCount}",
+                    Text = $"Category: {room.Category}",
                     Location = new Point(10, 70),
                     AutoSize = true
                 };
@@ -83,10 +83,10 @@ namespace Client
                 // Label for Availability
                 Label lblAvailability = new Label
                 {
-                    Text = room.IsAvailable ? "Available" : "Full",
+                    Text = room.PlayerTwo == null ? "Available" : "Full",
                     Location = new Point(10, 90),
                     AutoSize = true,
-                    ForeColor = room.IsAvailable ? Color.Green : Color.Red
+                    ForeColor = room.PlayerTwo == null ? Color.Green : Color.Red
                 };
                 roomPanel.Controls.Add(lblAvailability);
 
@@ -95,7 +95,8 @@ namespace Client
                 {
                     Text = "Join",
                     Location = new Point(210, 10),
-                    Size = new Size(90, 30)
+                    Size = new Size(90, 30),
+                    Enabled = room.PlayerTwo == null,
                 };
                 btnJoin.Click += (sender, e) => { JoinRoom(room); };
                 roomPanel.Controls.Add(btnJoin);
@@ -124,7 +125,12 @@ namespace Client
 
         private void JoinRoom(Room room)
         {
-            MessageBox.Show(room.RoomID.ToString());
+            //MessageBox.Show(room.ToString());
+            Command command = new Command();
+            command.CommandType = CommandType.JOIN_ROOM;
+            room.PlayerTwo = currentPlayer;
+            command.Room = room;
+            writer.WriteLine(JsonConvert.SerializeObject(command));
         }
 
         public void closeButton_Click(object sender, EventArgs e)

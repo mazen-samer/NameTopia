@@ -48,3 +48,4 @@ C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.genrunt
 C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\ref\Client.dll
 C:\Users\Ramboo\Desktop\NameTopia\Client\obj\Debug\net8.0-windows\Client.Resource1.resources
 E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.Resource1.resources
+E:\ITI\C#\NameTopia\Client\obj\Debug\net8.0-windows\Client.ViewGame.resources
