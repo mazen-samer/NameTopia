@@ -126,13 +126,13 @@ namespace Client
         private void SpectateRoom(Room room)
         {
             StreamWriter writer = new StreamWriter(currentPlayer.Client.GetStream()) { AutoFlush = true };
-            MessageBox.Show(room.ToString());
+            //MessageBox.Show(room.ToString());
             Command command = new Command();
             command.CommandType = CommandType.SPECTATE_ROOM;
             command.Room = room; // = 
             currentPlayer.isSpectator = true;
             command.Player = currentPlayer; // =
-            MessageBox.Show(command.ToString());
+            //MessageBox.Show(command.ToString());
             writer.WriteLine(JsonConvert.SerializeObject(command));
         }
 

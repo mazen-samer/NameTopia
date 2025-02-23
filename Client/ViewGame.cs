@@ -143,7 +143,7 @@ namespace Client
             DisableKey(command.PressedLetter);
             if (command.CommandType == CommandType.GAME_OVER)
             {
-                MessageBox.Show($"Congratulations {command.Winner}, you won!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Congratulations {command.Room}, you won!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();  // Disable further interaction
             }
         }
@@ -160,10 +160,10 @@ namespace Client
         }
         public void UpdateSpectatorStatus(Command command)
         {
-            MessageBox.Show("test for spectator");
-            MessageBox.Show(command.Room?.ToString() ?? "Empty room");
+            //MessageBox.Show("test for spectator");
+            //MessageBox.Show(command.Room?.ToString() ?? "Empty room");
             // Spectators only see updates without interaction.
-            guessedWord.Text = command.GameText;
+            guessedWord.Text = command.Room.GameText;
             this.room = command.Room;
 
             // Update the turn display for information.

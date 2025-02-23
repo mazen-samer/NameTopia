@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "E:\\ITI\\C#\\NameTopia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|e:\\iti\\c#\\nametopia\\client\\viewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|solutionrelative:client\\viewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{25E7F1BC-959E-4208-B56B-B445DC2DC5B9}|NameTopia\\Server.csproj|e:\\iti\\c#\\nametopia\\nametopia\\clienteventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25E7F1BC-959E-4208-B56B-B445DC2DC5B9}|NameTopia\\Server.csproj|solutionrelative:nametopia\\clienteventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|E:\\ITI\\C#\\NameTopia\\client\\viewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|solutionrelative:client\\viewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|e:\\iti\\c#\\nametopia\\client\\viewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|solutionrelative:client\\viewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25E7F1BC-959E-4208-B56B-B445DC2DC5B9}|NameTopia\\Server.csproj|e:\\iti\\c#\\nametopia\\nametopia\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25E7F1BC-959E-4208-B56B-B445DC2DC5B9}|NameTopia\\Server.csproj|solutionrelative:nametopia\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|e:\\iti\\c#\\nametopia\\client\\entrypoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|solutionrelative:client\\entrypoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25E7F1BC-959E-4208-B56B-B445DC2DC5B9}|NameTopia\\Server.csproj|e:\\iti\\c#\\nametopia\\nametopia\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25E7F1BC-959E-4208-B56B-B445DC2DC5B9}|NameTopia\\Server.csproj|solutionrelative:nametopia\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|E:\\ITI\\C#\\NameTopia\\client\\viewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|solutionrelative:client\\viewgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{527C4053-16DD-48E2-8399-9102D23AD5F0}|Client\\Client.csproj|e:\\iti\\c#\\nametopia\\client\\viewrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -83,13 +83,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ViewGame.cs",
               "DocumentMoniker": "E:\\ITI\\C#\\NameTopia\\Client\\ViewGame.cs",
               "RelativeDocumentMoniker": "Client\\ViewGame.cs",
               "ToolTip": "E:\\ITI\\C#\\NameTopia\\Client\\ViewGame.cs",
               "RelativeToolTip": "Client\\ViewGame.cs",
-              "ViewState": "AgIAAJoAAAAAAAAAAAAlwKgAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAawJEAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-21T22:15:58.449Z",
               "EditorCaption": ""
@@ -102,7 +102,7 @@
               "RelativeDocumentMoniker": "Client\\EntryPoint.cs",
               "ToolTip": "E:\\ITI\\C#\\NameTopia\\Client\\EntryPoint.cs",
               "RelativeToolTip": "Client\\EntryPoint.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAgwGIAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwFsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T21:37:21.609Z",
               "EditorCaption": ""
@@ -117,46 +117,44 @@
               "RelativeToolTip": "SharedClasses\\Command.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAkwBcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T22:49:51.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T22:49:51.583Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Server.cs",
               "DocumentMoniker": "E:\\ITI\\C#\\NameTopia\\NameTopia\\Server.cs",
               "RelativeDocumentMoniker": "NameTopia\\Server.cs",
               "ToolTip": "E:\\ITI\\C#\\NameTopia\\NameTopia\\Server.cs",
               "RelativeToolTip": "NameTopia\\Server.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwC4AAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwDIAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-15T15:35:36.088Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ClientEventHandler.cs",
               "DocumentMoniker": "E:\\ITI\\C#\\NameTopia\\NameTopia\\ClientEventHandler.cs",
               "RelativeDocumentMoniker": "NameTopia\\ClientEventHandler.cs",
               "ToolTip": "E:\\ITI\\C#\\NameTopia\\NameTopia\\ClientEventHandler.cs",
               "RelativeToolTip": "NameTopia\\ClientEventHandler.cs",
-              "ViewState": "AgIAAAcBAAAAAAAAAAAYwB0BAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAFwBAAAAAAAAAAAgwGYBAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T01:53:26.551Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ViewGame.cs [Design]",
               "DocumentMoniker": "E:\\ITI\\C#\\NameTopia\\Client\\ViewGame.cs",
               "RelativeDocumentMoniker": "Client\\ViewGame.cs",
               "ToolTip": "E:\\ITI\\C#\\NameTopia\\Client\\ViewGame.cs [Design]",
               "RelativeToolTip": "Client\\ViewGame.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T01:06:52.307Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-22T01:06:52.307Z"
             },
             {
               "$type": "Document",

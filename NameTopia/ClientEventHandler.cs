@@ -352,6 +352,37 @@ namespace Server
                     Console.WriteLine($"Error sending update to player {player.ID}: {ex.Message}");
                 }
             }
+
+
+            command2.CommandType = CommandType.GAME_OVER_SPECTATOR;
+            command2.Room = command.Room;
+            command2.Winner = command.Winner;
+            if (command.Room.Spectators != null)
+            {
+                for (int i = 0; i < command.Room.Spectators.Count; i++)
+                {
+                    Console.WriteLine("There are spectators to be updated");
+                    // Get spectator's ID from the room's spectator list.
+                    var spectatorId = command.Room.Spectators[i].ID;
+                    // Now iterate through the players list to find the matching player.
+                    for (int j = 0; j < players.Count; j++)
+                    {
+                        if (players[j].ID == spectatorId)
+                        {
+                            try
+                            {
+                                StreamWriter writer = new StreamWriter(players[j].Client.GetStream()) { AutoFlush = true };
+                                writer.WriteLine(JsonConvert.SerializeObject(command2));
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine($"Error sending spectator update to player {players[j].ID}: {ex.Message}");
+                            }
+                            break; // Found the matching spectator, no need to check further.
+                        }
+                    }
+                }
+            }
         }
     }
 }
