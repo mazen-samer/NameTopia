@@ -116,6 +116,7 @@ namespace Client
                 }
 
                 // Send the updated game status to the server
+                this.room.GameText = updatedGameText;
                 Command command = new Command
                 {
                     CommandType = CommandType.UPDATE_GAME_STATUS,

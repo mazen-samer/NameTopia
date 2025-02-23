@@ -115,7 +115,7 @@ namespace Client
                 // btnSpectate.ImageAlign = ContentAlignment.MiddleLeft;
                 // btnSpectate.TextAlign = ContentAlignment.MiddleRight
                 //btnSpectate.Image = Client.Properties.Resources.spyIcon;
-
+                btnSpectate.Click += (sender, e) => { SpectateRoom(room); };
                 roomPanel.Controls.Add(btnSpectate);
 
                 // Add the room panel to the FlowLayoutPanel
@@ -123,6 +123,10 @@ namespace Client
             }
         }
 
+        private void SpectateRoom(Room room)
+        {
+            MessageBox.Show(room.ToString());
+        }
 
         private void JoinRoom(Room room)
         {

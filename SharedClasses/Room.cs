@@ -16,6 +16,7 @@
         public PlayerTurn PlayerTurn { get; set; }
         public List<Player> Spectator { get; set; }
         public bool isJoinable { get; set; }
+        public string GameText { get; set; }
         public Room()
         {
             PlayerTurn = PlayerTurn.OWNER;
@@ -29,7 +30,7 @@
         }
         public override string ToString()
         {
-            return $"RoomID={RoomID}, Guessed Word={GuessedWord}, PlayerOne={PlayerOne?.Name}, PlayerTwo={PlayerTwo?.Name}, Category={Category}";
+            return $"RoomID={RoomID}, Guessed Word={GuessedWord}, Gametext={GameText} PlayerOne={PlayerOne?.Name}, PlayerTwo={PlayerTwo?.Name}, Category={Category}";
         }
     }
 }

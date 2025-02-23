@@ -45,7 +45,7 @@ namespace NameTopia
                             ClientEventHandler.JoinRoom(tcpClient, currentCommand, rooms, players);
                             break;
                         case CommandType.UPDATE_GAME_STATUS:
-                            ClientEventHandler.UpdateGameStatusForRoom(tcpClient, currentCommand, players);
+                            ClientEventHandler.UpdateGameStatusForRoom(tcpClient, currentCommand, players, rooms);
                             break;
                         case CommandType.GAME_OVER:
                             ClientEventHandler.NotifyWinner(currentCommand, players, rooms);

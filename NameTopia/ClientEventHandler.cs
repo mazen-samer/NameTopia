@@ -160,7 +160,7 @@ namespace Server
                 }
             }
         }
-        public static void UpdateGameStatusForRoom(TcpClient client, Command command, List<Player> players)
+        public static void UpdateGameStatusForRoom(TcpClient client, Command command, List<Player> players, List<Room> rooms)
         {
             Console.WriteLine(command.Room);
             foreach (Player player in players)
@@ -171,6 +171,33 @@ namespace Server
                     StreamWriter writer = new StreamWriter(player.Client.GetStream()) { AutoFlush = true };
                     writer.WriteLine(JsonConvert.SerializeObject(command));
                     break;
+                }
+            }
+            lock (lockObj)
+            {
+                for (int i = 0; i < rooms.Count; i++)
+                {
+                    if (rooms[i].RoomID == command.Room.RoomID)
+                    {
+                        rooms[i] = command.Room;
+                    }
+                }
+            }
+            Console.WriteLine(command.Room.ToString());
+            Command command2 = new Command();
+            command2.CommandType = CommandType.RECIEVE_ROOMS;
+            command2.Rooms = rooms;
+
+            foreach (Player player in players)
+            {
+                try
+                {
+                    StreamWriter writer = new StreamWriter(player.Client.GetStream()) { AutoFlush = true };
+                    writer.WriteLine(JsonConvert.SerializeObject(command2));
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error sending update to player {player.ID}: {ex.Message}");
                 }
             }
         }
