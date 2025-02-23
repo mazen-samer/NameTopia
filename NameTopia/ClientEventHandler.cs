@@ -160,19 +160,12 @@ namespace Server
                 }
             }
         }
-        public static void UpdateGameStatusForRoom(TcpClient client, Command command, List<Player> players, List<Room> rooms)
+
+        public static void StartSpectate(TcpClient client, Command command, List<Player> players, List<Room> rooms)
         {
-            Console.WriteLine(command.Room);
-            foreach (Player player in players)
-            {
-                Console.WriteLine($"this is {command.Room.TurnToPlay.ID.ToString()} and this is " + player.ID.ToString());
-                if (command.Room.TurnToPlay.ID == player.ID)
-                {
-                    StreamWriter writer = new StreamWriter(player.Client.GetStream()) { AutoFlush = true };
-                    writer.WriteLine(JsonConvert.SerializeObject(command));
-                    break;
-                }
-            }
+            StreamWriter writer;
+            Console.WriteLine($"I am player {command.Player.Name} and i want to join {command.Room}");
+            command.Room.Spectators.Add(command.Player);
             lock (lockObj)
             {
                 for (int i = 0; i < rooms.Count; i++)
@@ -183,11 +176,79 @@ namespace Server
                     }
                 }
             }
-            Console.WriteLine(command.Room.ToString());
+            Console.WriteLine("from start spectate function " + command.Room.ToString());
             Command command2 = new Command();
             command2.CommandType = CommandType.RECIEVE_ROOMS;
             command2.Rooms = rooms;
 
+            foreach (Player player in players)
+            {
+                try
+                {
+                    writer = new StreamWriter(player.Client.GetStream()) { AutoFlush = true };
+                    writer.WriteLine(JsonConvert.SerializeObject(command2));
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error sending update to player {player.ID}: {ex.Message}");
+                }
+            }
+            Command command3 = new Command();
+            command3.CommandType = CommandType.START_SPECTATE;
+            command3.Room = command.Room;
+            command3.Player = command.Player;
+            writer = new StreamWriter(client.GetStream()) { AutoFlush = true };
+            writer.WriteLine(JsonConvert.SerializeObject(command3));
+
+            Command command4 = new Command();
+            command4.CommandType = CommandType.ADD_SPECTATOR_TO_ROOM;
+            command4.Player = command.Player;
+
+            foreach (Player player in players)
+            {
+                if (player.ID == command.Room.PlayerOne.ID)
+                {
+                    writer = new StreamWriter(player.Client.GetStream()) { AutoFlush = true };
+                    writer.WriteLine(JsonConvert.SerializeObject(command4));
+                }
+                if (player.ID == command.Room.PlayerTwo.ID)
+                {
+                    writer = new StreamWriter(player.Client.GetStream()) { AutoFlush = true };
+                    writer.WriteLine(JsonConvert.SerializeObject(command4));
+                }
+            }
+
+        }
+        // el room elly hna mosh bya5odha updated ////// START HEREEEEEE TMRWWWWWWW
+        public static void UpdateGameStatusForRoom(TcpClient client, Command command, List<Player> players, List<Room> rooms)
+        {
+            Console.WriteLine("test1 " + command.Room);
+            // First, update the turn so that the current player whose turn it is receives an update.
+            foreach (Player player in players)
+            {
+                Console.WriteLine($"this is {command.Room.TurnToPlay.ID.ToString()} and this is " + player.ID.ToString());
+                if (command.Room.TurnToPlay.ID == player.ID)
+                {
+                    StreamWriter writer = new StreamWriter(player.Client.GetStream()) { AutoFlush = true };
+                    writer.WriteLine(JsonConvert.SerializeObject(command));
+                    break;
+                }
+            }
+            // Update the room in the rooms list.
+            lock (lockObj)
+            {
+                for (int i = 0; i < rooms.Count; i++)
+                {
+                    if (rooms[i].RoomID == command.Room.RoomID)
+                    {
+                        rooms[i] = command.Room;
+                    }
+                }
+            }
+            // Prepare a command to update all players with the new room list.
+            Command command2 = new Command();
+            command2.CommandType = CommandType.RECIEVE_ROOMS;
+            command2.Rooms = rooms;
             foreach (Player player in players)
             {
                 try
@@ -200,7 +261,42 @@ namespace Server
                     Console.WriteLine($"Error sending update to player {player.ID}: {ex.Message}");
                 }
             }
+
+            // Now send updates to the spectators in the room.
+            // Change the command type to the spectator-specific update.
+            command2.CommandType = CommandType.UPDATE_SPECTATOR_STATUS;
+            command2.Room = command.Room;
+
+            // For each spectator in the room's Spectator list, find their corresponding Player object in the players list
+            // (since the spectator objects don't hold the TCP connection).
+            if (command.Room.Spectators != null)
+            {
+                for (int i = 0; i < command.Room.Spectators.Count; i++)
+                {
+                    Console.WriteLine("There are spectators to be updated");
+                    // Get spectator's ID from the room's spectator list.
+                    var spectatorId = command.Room.Spectators[i].ID;
+                    // Now iterate through the players list to find the matching player.
+                    for (int j = 0; j < players.Count; j++)
+                    {
+                        if (players[j].ID == spectatorId)
+                        {
+                            try
+                            {
+                                StreamWriter writer = new StreamWriter(players[j].Client.GetStream()) { AutoFlush = true };
+                                writer.WriteLine(JsonConvert.SerializeObject(command2));
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine($"Error sending spectator update to player {players[j].ID}: {ex.Message}");
+                            }
+                            break; // Found the matching spectator, no need to check further.
+                        }
+                    }
+                }
+            }
         }
+
         public static void NotifyWinner(Command command, List<Player> players, List<Room> rooms)
         {
             // Find the other player in the room

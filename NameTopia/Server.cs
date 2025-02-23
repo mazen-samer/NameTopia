@@ -50,6 +50,9 @@ namespace NameTopia
                         case CommandType.GAME_OVER:
                             ClientEventHandler.NotifyWinner(currentCommand, players, rooms);
                             break;
+                        case CommandType.SPECTATE_ROOM:
+                            ClientEventHandler.StartSpectate(tcpClient, currentCommand, players, rooms);
+                            break;
                         case CommandType.CLOSE:
                             ClientEventHandler.HandleClientClosure(tcpClient, players);
                             connectionClosed = true;

@@ -11,21 +11,20 @@ namespace Client
         TcpClient client;
         Room room;
         Player player;
-        public ViewGame(Room room, string PlayerName, Player player)
+        public ViewGame(Room room, Player PlayerName, Player player)
         {
             InitializeComponent();
             CreateKeyboardButtons();
             this.room = room;
-            pagePlayerName.Text = PlayerName;
+            pagePlayerName.Text = PlayerName.Name;
             this.player = player;
             client = player.Client;
             OwnerName.Text = playerTurn.Text = room.PlayerOne.Name;
             GuestName.Text = room.PlayerTwo?.Name ?? "Waiting for another player to join...";
 
             dashedWordBuilder = new StringBuilder(new string('_', room.GuessedWord.Length));
-            guessedWord.Text = dashedWordBuilder.ToString();
-
-            this.Enabled = false;
+            guessedWord.Text = PlayerName.isSpectator ? room.GameText : dashedWordBuilder.ToString();
+            this.keyboardPanel.Enabled = false;
         }
         private void CreateKeyboardButtons()
         {
@@ -48,7 +47,7 @@ namespace Client
         {
             GuestName.Text = room.PlayerTwo?.Name ?? "";
             this.room.PlayerTwo = room.PlayerTwo;
-            this.Enabled = room.PlayerTurn == PlayerTurn.OWNER;
+            this.keyboardPanel.Enabled = room.PlayerTurn == PlayerTurn.OWNER;
         }
 
         private void KeyboardButton_Click(object sender, EventArgs e)
@@ -101,7 +100,7 @@ namespace Client
                 }
 
                 // Toggle player's turn
-                this.Enabled = false;
+                this.keyboardPanel.Enabled = false;
                 if (room.PlayerTurn == PlayerTurn.OWNER)
                 {
                     room.PlayerTurn = PlayerTurn.GUEST;
@@ -133,7 +132,7 @@ namespace Client
 
         public void UpdateGameStatus(Command command)
         {
-            this.Enabled = true;
+            this.keyboardPanel.Enabled = true;
             guessedWord.Text = command.GameText;
             this.room = command.Room;
 
@@ -158,6 +157,34 @@ namespace Client
                     break; // Exit after finding and disabling the matching button.
                 }
             }
+        }
+        public void UpdateSpectatorStatus(Command command)
+        {
+            MessageBox.Show("test for spectator");
+            MessageBox.Show(command.Room?.ToString() ?? "Empty room");
+            // Spectators only see updates without interaction.
+            guessedWord.Text = command.GameText;
+            this.room = command.Room;
+
+            // Update the turn display for information.
+            playerTurn.Text = (command.Room.PlayerTurn == PlayerTurn.OWNER)
+                                ? command.Room.PlayerOne.Name
+                                : command.Room.PlayerTwo?.Name ?? "Waiting...";
+
+            // Ensure that interactive controls remain disabled.
+            keyboardPanel.Enabled = false;
+
+            // If the command signals a game-over for spectators, show a message and close the view.
+            if (command.CommandType == CommandType.GAME_OVER_SPECTATOR)
+            {
+                MessageBox.Show($"Game Over! Winner is: {command.Winner}", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+            }
+        }
+
+        public void AddSpectatorToRoom(Player player)
+        {
+            this.room.Spectators.Add(player);
         }
 
     }

@@ -67,7 +67,7 @@ namespace Client
                     break;
 
                 case CommandType.START_GAME:
-                    viewGame = new ViewGame(command.Room, command.Room.PlayerOne.Name, player);
+                    viewGame = new ViewGame(command.Room, command.Room.PlayerOne, player);
                     viewGame.Show();
                     break;
                 //This function is just for the Owner of the Game updating that someone joined!!!
@@ -76,14 +76,27 @@ namespace Client
                     break;
                 //Guest Player
                 case CommandType.START_GAME_FOR_GUEST:
-                    viewGame = new ViewGame(command.Room, command.Room.PlayerTwo.Name, player);
+                    viewGame = new ViewGame(command.Room, command.Room.PlayerTwo, player);
                     viewGame.Show();
                     break;
                 case CommandType.UPDATE_GAME_STATUS:
                     viewGame.UpdateGameStatus(command);
                     break;
+                case CommandType.UPDATE_SPECTATOR_STATUS:
+                    viewGame.UpdateSpectatorStatus(command);
+                    break;
+                case CommandType.START_SPECTATE:
+                    viewGame = new ViewGame(command.Room, command.Player, player);
+                    viewGame?.Show();
+                    break;
                 case CommandType.GAME_OVER:
                     viewGame.UpdateGameStatus(command);
+                    break;
+                case CommandType.ADD_SPECTATOR_TO_ROOM:
+                    viewGame.AddSpectatorToRoom(command.Player);
+                    break;
+                case CommandType.GAME_OVER_SPECTATOR:
+                    viewGame.UpdateSpectatorStatus(command);
                     break;
             }
         }

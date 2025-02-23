@@ -14,7 +14,7 @@
         public string Category { get; set; }
         public string GuessedWord { get; set; }
         public PlayerTurn PlayerTurn { get; set; }
-        public List<Player> Spectator { get; set; }
+        public List<Player> Spectators { get; set; }
         public bool isJoinable { get; set; }
         public string GameText { get; set; }
         public Room()
@@ -27,10 +27,11 @@
             PlayerOne = player;
             Category = category;
             isJoinable = true;
+            Spectators = new List<Player>();
         }
         public override string ToString()
         {
-            return $"RoomID={RoomID}, Guessed Word={GuessedWord}, Gametext={GameText} PlayerOne={PlayerOne?.Name}, PlayerTwo={PlayerTwo?.Name}, Category={Category}";
+            return $"RoomID={RoomID}, Guessed Word={GuessedWord}, Gametext={GameText} PlayerOne={PlayerOne?.Name}, PlayerTwo={PlayerTwo?.Name}, Category={Category}, no of spectators={Spectators.Count}";
         }
     }
 }

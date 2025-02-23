@@ -9,6 +9,7 @@
         GET_CATEGORIES,
         CLOSE,
         JOIN_ROOM,
+        SPECTATE_ROOM,
 
         // client commands
         SEND_PLAYER,
@@ -17,6 +18,10 @@
         START_GAME,
         START_GAME_FOR_GUEST,
         UPDATE_ROOM,
+        START_SPECTATE,
+        GAME_OVER_SPECTATOR,
+        UPDATE_SPECTATOR_STATUS,
+        ADD_SPECTATOR_TO_ROOM,
 
         // both
         UPDATE_GAME_STATUS,
