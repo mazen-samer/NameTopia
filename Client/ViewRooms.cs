@@ -141,6 +141,7 @@ namespace Client
             //MessageBox.Show(room.ToString());
             Command command = new Command();
             command.CommandType = CommandType.JOIN_ROOM;
+            currentPlayer.isSpectator = false;
             room.PlayerTwo = currentPlayer;
             command.Room = room;
             writer.WriteLine(JsonConvert.SerializeObject(command));

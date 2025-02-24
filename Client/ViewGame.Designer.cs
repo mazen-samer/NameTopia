@@ -70,7 +70,7 @@
             // 
             guessedWord.AutoSize = true;
             guessedWord.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guessedWord.Location = new Point(302, 98);
+            guessedWord.Location = new Point(310, 151);
             guessedWord.Name = "guessedWord";
             guessedWord.Size = new Size(196, 54);
             guessedWord.TabIndex = 3;

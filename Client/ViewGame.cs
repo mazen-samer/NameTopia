@@ -81,7 +81,7 @@ namespace Client
                 {
                     string winner = playerTurn.Text;  // The last player who guessed correctly
 
-                    MessageBox.Show($"Congratulations {winner}, you won!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Congratulations {winner}, you won!");
                     this.room.isJoinable = false;
                     // Send win status to the server
                     Command winCommand = new Command
@@ -143,7 +143,7 @@ namespace Client
             DisableKey(command.PressedLetter);
             if (command.CommandType == CommandType.GAME_OVER)
             {
-                MessageBox.Show($"Congratulations {command.Room}, you won!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Unfortunately {this.player.Name}, you lost :c!");
                 this.Hide();  // Disable further interaction
             }
         }
@@ -177,7 +177,7 @@ namespace Client
             // If the command signals a game-over for spectators, show a message and close the view.
             if (command.CommandType == CommandType.GAME_OVER_SPECTATOR)
             {
-                MessageBox.Show($"Game Over! Winner is: {command.Winner}", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Game Over! Winner is: {command.Winner}");
                 this.Hide();
             }
         }
